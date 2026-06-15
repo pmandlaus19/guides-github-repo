@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: https://guides.adobe.com/eds-workers/pmandlaus19/guides_eds/main/docs
+    url: https://guides.adobe.com/eds-workers/pmandlaus19/guides_eds/main_2/docs
     type: markup
 
