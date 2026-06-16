@@ -1,6 +1,6 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"content_ref_file","url":"contents/content-ref-file"}]
-const mapTitle = "content_ref_map"
+const treeData = [{"displayName":"testgitlab","url":"contents/testgitlab"}]
+const mapTitle = "testgitlab.ditamap"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
 function expandHeirarchy(element, root) {
