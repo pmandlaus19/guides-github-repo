@@ -1,1 +1,1 @@
-export default [{"displayName":"content_ref_file","url":"contents/content-ref-file"}]
+export default [{"displayName":"testgitlab","url":"contents/testgitlab"}]
