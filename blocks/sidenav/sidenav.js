@@ -1,6 +1,6 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"GUID-3df90eab-57a7-42e9-83ce-b9cdd7e8c24f","url":"contents/pdfproject/dita/test/guid-3df90eab-57a7-42e9-83ce-b9cdd7e8c24f"}]
-const mapTitle = "test2"
+const treeData = []
+const mapTitle = "testGit"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
 function expandHeirarchy(element, root) {
