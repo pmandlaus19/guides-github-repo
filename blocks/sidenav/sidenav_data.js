@@ -1,1 +1,1 @@
-export default [{"displayName":"GUID-3df90eab-57a7-42e9-83ce-b9cdd7e8c24f","url":"contents/pdfproject/dita/test/guid-3df90eab-57a7-42e9-83ce-b9cdd7e8c24f"}]
+export default []
