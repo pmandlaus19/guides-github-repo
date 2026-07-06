@@ -1,6 +1,6 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"i-have-xrefs","url":"contents/dita/i-have-xrefs"},{"displayName":"file-reference","url":"contents/dita/file-reference"},{"displayName":"content-key-reference","url":"contents/dita/content-key-reference"},{"displayName":"content-references","url":"contents/dita/content-references"},{"displayName":"key-reference","url":"contents/dita/key-reference"},{"displayName":"i-have-xref-in-title","url":"contents/dita/i-have-xref-in-title"}]
-const mapTitle = "publish-me"
+const treeData = [{"displayName":"bulk-metadata","url":"contents/bulk-metadata"},{"displayName":"tabletopic","url":"contents/tabletopic"}]
+const mapTitle = "bulk metadata"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
 function expandHeirarchy(element, root) {
