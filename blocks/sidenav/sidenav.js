@@ -1,6 +1,6 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"testgit_3","url":"contents/testgitlab/testgit-3"},{"displayName":"testgit_2","url":"contents/testgit/testgit-2"},{"displayName":"testgit_1","url":"contents/testgit/testgit-1"}]
-const mapTitle = "newMap"
+const treeData = [{"displayName":"bulk-metadata","url":"contents/bulk-metadata"}]
+const mapTitle = "bulk metadata"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
 function expandHeirarchy(element, root) {
