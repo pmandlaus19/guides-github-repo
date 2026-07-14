@@ -1,6 +1,6 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"topic1","url":"contents/topic1"},{"displayName":"topic2","url":"contents/topic2"},{"displayName":"topic3","url":"contents/topic3"}]
-const mapTitle = "map1"
+const treeData = [{"displayName":"i-have-xrefs","url":"contents/all-keys-references/i-have-xrefs"},{"displayName":"file-reference","url":"contents/all-keys-references/file-reference"},{"displayName":"content-key-reference","url":"contents/all-keys-references/content-key-reference"},{"displayName":"content-references","url":"contents/all-keys-references/content-references"},{"displayName":"key-reference","url":"contents/all-keys-references/key-reference"},{"displayName":"i-have-xref-to-different-elements","url":"contents/all-keys-references/i-have-xref-in-title"}]
+const mapTitle = "publish-me"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
 function expandHeirarchy(element, root) {
