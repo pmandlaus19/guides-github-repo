@@ -1,1 +1,1 @@
-export default [{"displayName":"bulk-metadata","url":"contents/bulk-metadata"},{"displayName":"tabletopic","url":"contents/tabletopic"}]
+export default [{"displayName":"topic1","url":"contents/topic1"},{"displayName":"topic2","url":"contents/topic2"},{"displayName":"topic3","url":"contents/topic3"}]
