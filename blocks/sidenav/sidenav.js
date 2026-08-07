@@ -1,6 +1,6 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"_key":"contents/testFolderStructure/level1.ditamap","displayName":"level1","isMap":true,"children":[{"displayName":"level2","url":"","children":[{"displayName":"test3","url":"","children":[{"displayName":"Administration Concept 077","url":"contents/large-fileset/topic-077"}],"isMap":true,"_key":"contents/test3/test3.ditamap"},{"displayName":"level2","url":"contents/testfolderstructure/level2folder/level2"},{"displayName":"level1","url":"contents/testfolderstructure/level1"}],"isMap":true,"_key":"contents/testFolderStructure/level2Folder/level2.ditamap"},{"displayName":"level1","url":"contents/testfolderstructure/level1"},{"displayName":"test_2","url":"contents/test-2"}]}]
-const mapTitle = "test3"
+const treeData = [{"_key":"contents/testFolderStructure/level1.ditamap","displayName":"level1","isMap":true,"children":[{"displayName":"level2","url":"","children":[{"displayName":"test3","url":"","children":[{"displayName":"Administration Concept 077","url":"contents/large-fileset/topic-077"}],"isMap":true,"_key":"contents/test3/test3.ditamap"},{"displayName":"level2","url":"contents/testfolderstructure/level2folder/level2"},{"displayName":"level1","url":"contents/testfolderstructure/level1"}],"isMap":true,"_key":"contents/testFolderStructure/level2Folder/level2.ditamap"},{"displayName":"level1","url":"contents/testfolderstructure/level1"},{"displayName":"test_2","url":"contents/test-2"}]},{"_key":"contents/test.ditamap","displayName":"test","isMap":true,"children":[{"displayName":"test2","url":"contents/test-2"}]}]
+const mapTitle = "test"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
 function expandHeirarchy(element, root) {
