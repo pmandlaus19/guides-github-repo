@@ -1,5 +1,5 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"_key":"contents/testFolderStructure/level1.ditamap","displayName":"level2","url":"contents/testfolderstructure/level2folder/level2"},{"_key":"contents/testFolderStructure/level1.ditamap","displayName":"level1","url":"contents/testfolderstructure/level1"},{"_key":"contents/testFolderStructure/level1.ditamap","displayName":"level1","url":"contents/testfolderstructure/level1"},{"_key":"contents/testFolderStructure/level1.ditamap","displayName":"test_2","url":"contents/test-2"},{"_key":"contents/testFolderStructure/level1.ditamap","displayName":"test1","url":"contents/test1"},{"_key":"contents/level2Folder/level2.ditamap","displayName":"level2","url":"contents/level2folder/level2"},{"_key":"contents/level2Folder/level2.ditamap","displayName":"level1","url":"contents/level1"}]
+const treeData = [{"_key":"contents/testFolderStructure/level1.ditamap","displayName":"level1","isSubmap":true,"children":[{"displayName":"level2","url":"contents/testfolderstructure/level2folder/level2"},{"displayName":"level1","url":"contents/testfolderstructure/level1"},{"displayName":"level1","url":"contents/testfolderstructure/level1"},{"displayName":"test_2","url":"contents/test-2"},{"displayName":"test1","url":"contents/test1"}]}]
 const mapTitle = "level1"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
