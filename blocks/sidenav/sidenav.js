@@ -1,6 +1,6 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"topic_054","url":"contents/large-fileset/topic-054"},{"displayName":"topic_003","url":"contents/large-fileset/topic-003"},{"displayName":"testtopicsvg","url":"contents/test2/testtopicsvg"},{"displayName":"topic_089","url":"contents/large-fileset/topic-089"},{"displayName":"topic_093","url":"contents/large-fileset/topic-093"}]
-const mapTitle = "testMapRepublish"
+const treeData = [{"displayName":"topic_054","url":"contents/large-fileset/topic-054"},{"displayName":"topic_003","url":"contents/large-fileset/topic-003"},{"displayName":"testtopicsvg","url":"contents/test2/testtopicsvg"},{"displayName":"topic_089","url":"contents/large-fileset/topic-089"},{"displayName":"topic_093","url":"contents/large-fileset/topic-093"},{"displayName":"testMapRepublish","isMap":true,"children":[{"displayName":"Publishing Topic 054","url":"contents/large-fileset/topic-054"},{"displayName":"Authoring Concept 003","url":"contents/large-fileset/topic-003"},{"displayName":"testtopicsvg.dita","url":"contents/test2/testtopicsvg"},{"displayName":"Administration Concept 089","url":"contents/large-fileset/topic-089"},{"displayName":"Administration Concept 093","url":"contents/large-fileset/topic-093"}],"_key":"GUID-f45e1c99-d042-4219-bfd6-6f87198dd1bb"}]
+const mapTitle = "guides-github-repo-main"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
 function expandHeirarchy(element, root) {
