@@ -1,1 +1,1 @@
-export default []
+export default [{"displayName":"glossary-map","isMap":true,"children":[],"_key":"GUID-0f83a3f0-d794-4874-8b17-6e14a134ca52"}]

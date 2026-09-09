@@ -1,6 +1,6 @@
 import { migrateTree } from "../utils.js";
-const treeData = []
-const mapTitle = "glossary-map"
+const treeData = [{"displayName":"glossary-map","isMap":true,"children":[],"_key":"GUID-0f83a3f0-d794-4874-8b17-6e14a134ca52"}]
+const mapTitle = "guides-github-repo-main"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
 function expandHeirarchy(element, root) {
