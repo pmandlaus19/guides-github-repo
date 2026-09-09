@@ -1,1 +1,1 @@
-export default [{"displayName":"Topic1","url":"contents/map1/topic1"}]
+export default [{"displayName":"Topic2","url":"contents/map2/topic2"},{"displayName":"Topic1","url":"contents/map1/topic1"}]
