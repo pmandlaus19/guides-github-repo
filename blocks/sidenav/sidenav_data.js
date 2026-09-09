@@ -1,1 +1,1 @@
-export default [{"displayName":"i-have-xrefs","url":"contents/i-have-xrefs"},{"displayName":"file-reference","url":"contents/file-reference"},{"displayName":"content-key-reference","url":"contents/content-key-reference"},{"displayName":"content-references","url":"contents/content-references"},{"displayName":"key-reference","url":"contents/key-reference"},{"displayName":"i-have-xref-to-different-elements","url":"contents/i-have-xref-in-title"}]
+export default [{"displayName":"root map topic 1","url":"contents/r2-t2"},{"displayName":"root map topic 2","url":"contents/r2-k2"}]
