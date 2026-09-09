@@ -1,6 +1,6 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"glossary-map","isMap":true,"children":[],"_key":"GUID-0f83a3f0-d794-4874-8b17-6e14a134ca52"}]
-const mapTitle = "guides-github-repo-main"
+const treeData = [{"displayName":"Video content Topic","url":"contents/multimedia-report-data/media-topic"},{"displayName":"Image content testing ","url":"contents/multimedia-report-data/image-content-testing-"},{"displayName":"indirect Topic","url":"contents/multimedia-report-data/indirect-topic"}]
+const mapTitle = "Multimedia Report"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
 function expandHeirarchy(element, root) {
