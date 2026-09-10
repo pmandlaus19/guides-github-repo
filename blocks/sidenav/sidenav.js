@@ -1,6 +1,6 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"Paragraph and Styles Updated","url":"","children":[{"displayName":"Paragraph and Styles Updated","url":"contents/topics/paragraph-and-styles-updated"},{"displayName":"Para2Heading","url":"contents/topics/para2heading"}]},{"displayName":"Styles in Heading","url":"contents/topics/styles-in-heading"},{"displayName":"Styles in Lists","url":"","children":[{"displayName":"Styles in Lists","url":"contents/topics/styles-in-lists"},{"displayName":"Para-3Heading","url":"contents/topics/para-3heading"}]}]
-const mapTitle = "Automation Test 1"
+const treeData = [{"displayName":"Table 1","url":"contents/dita/topics/table-1"},{"displayName":"Table 2: table with Merged cells","url":"contents/dita/topics/table-2-table-with-merged-cells"},{"displayName":"Table 3: Table with Lists","url":"contents/dita/topics/table-3-table-with-lists"},{"displayName":"Table 4: Table with Image","url":"contents/dita/topics/table-4-table-with-image"},{"displayName":"Table 5: Table with multiple merged cells","url":"contents/dita/topics/table-5-table-with-multiple-merged-cells"}]
+const mapTitle = "Automation Test 4"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
 function expandHeirarchy(element, root) {
