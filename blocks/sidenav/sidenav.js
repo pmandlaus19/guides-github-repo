@@ -1,6 +1,6 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"Table 1","url":"contents/dita/topics/table-1"},{"displayName":"Table 2: table with Merged cells","url":"contents/dita/topics/table-2-table-with-merged-cells"},{"displayName":"Table 3: Table with Lists","url":"contents/dita/topics/table-3-table-with-lists"},{"displayName":"Table 4: Table with Image","url":"contents/dita/topics/table-4-table-with-image"},{"displayName":"Table 5: Table with multiple merged cells","url":"contents/dita/topics/table-5-table-with-multiple-merged-cells"}]
-const mapTitle = "Automation Test 4"
+const treeData = [{"displayName":"Table 5: Table with multiple merged cells","url":"contents/guid-8d9b8d83-2a54-47b4-825b-9230da1095be"},{"displayName":"GUID-8b8fe8a4-0a17-4548-bb0d-fc4194164ffc.dita","url":"contents/guid-8b8fe8a4-0a17-4548-bb0d-fc4194164ffc"}]
+const mapTitle = "testTables"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
 function expandHeirarchy(element, root) {
