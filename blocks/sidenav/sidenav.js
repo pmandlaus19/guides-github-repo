@@ -1,6 +1,6 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"Nested Ordered List","url":"contents/topics/nested-ordered-list"},{"displayName":"Nested Unordered List","url":"contents/topics/nested-unordered-list"},{"displayName":"Combination of ordered and unordered list","url":"contents/topics/combination-of-ordered-and-unordered-list"}]
-const mapTitle = "Automation Test 2"
+const treeData = [{"displayName":"Paragraph and Styles Updated","url":"","children":[{"displayName":"Paragraph and Styles Updated","url":"contents/topics/paragraph-and-styles-updated"},{"displayName":"Para2Heading","url":"contents/topics/para2heading"}]},{"displayName":"Styles in Heading","url":"contents/topics/styles-in-heading"},{"displayName":"Styles in Lists","url":"","children":[{"displayName":"Styles in Lists","url":"contents/topics/styles-in-lists"},{"displayName":"Para-3Heading","url":"contents/topics/para-3heading"}]}]
+const mapTitle = "Automation Test 1"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
 function expandHeirarchy(element, root) {
