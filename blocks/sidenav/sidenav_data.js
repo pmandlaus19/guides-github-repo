@@ -1,1 +1,1 @@
-export default [{"displayName":"This is Heading 1","url":"contents/topics/this-is-heading-1-1"},{"displayName":"This is   Heading 1","url":"","children":[{"displayName":"This is   Heading 1","url":"contents/topics/this-is-heading-1-2"},{"displayName":"this IS Heading 2","url":"contents/topics/this-is-heading-2"}]}]
+export default [{"displayName":"List with Tables and Images","url":"contents/topics/list-with-tables-and-images"},{"displayName":"List with Images","url":"contents/topics/list-with-images"}]
