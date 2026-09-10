@@ -1,6 +1,6 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"This is Heading 1","url":"contents/topics/this-is-heading-1-1"},{"displayName":"This is   Heading 1","url":"","children":[{"displayName":"This is   Heading 1","url":"contents/topics/this-is-heading-1-2"},{"displayName":"this IS Heading 2","url":"contents/topics/this-is-heading-2"}]}]
-const mapTitle = "Automation file 5"
+const treeData = [{"displayName":"List with Tables and Images","url":"contents/topics/list-with-tables-and-images"},{"displayName":"List with Images","url":"contents/topics/list-with-images"}]
+const mapTitle = "Automation Test 3"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
 function expandHeirarchy(element, root) {
