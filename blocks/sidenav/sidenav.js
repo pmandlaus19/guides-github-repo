@@ -1,5 +1,5 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"Table 5: Table with multiple merged cells","url":"contents/guid-8d9b8d83-2a54-47b4-825b-9230da1095be"},{"displayName":"GUID-8b8fe8a4-0a17-4548-bb0d-fc4194164ffc.dita","url":"contents/guid-8b8fe8a4-0a17-4548-bb0d-fc4194164ffc"}]
+const treeData = [{"displayName":"Table 5: Table with multiple merged cells","url":"contents/guid-8d9b8d83-2a54-47b4-825b-9230da1095be"},{"displayName":"there","url":"contents/guid-8b8fe8a4-0a17-4548-bb0d-fc4194164ffc"}]
 const mapTitle = "testTables"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
