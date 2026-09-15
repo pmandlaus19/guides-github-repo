@@ -1,6 +1,6 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"Topic","url":"contents/testtables1/guid-ffdf061a-be35-4825-a870-92dcae708e41"},{"displayName":"there","url":"contents/testtables/guid-8b8fe8a4-0a17-4548-bb0d-fc4194164ffc"},{"displayName":"Table 5: Table with multiple merged cells","url":"contents/testtables/guid-8d9b8d83-2a54-47b4-825b-9230da1095be"},{"displayName":"Topic","url":"contents/testtables/subfolder1/guid-31fd5ded-e5a8-4902-a946-74e936a9b66b"}]
-const mapTitle = "testTables"
+const treeData = [{"displayName":"Topic","url":"contents/guid-ffdf061a-be35-4825-a870-92dcae708e41"}]
+const mapTitle = "testTables1"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
 function expandHeirarchy(element, root) {
