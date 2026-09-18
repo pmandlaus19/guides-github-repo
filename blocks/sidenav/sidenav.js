@@ -1,5 +1,5 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"testMapRepublish","isMap":true,"children":[{"displayName":"Administration Concept 089","url":"contents/check1/large-fileset/topic-089"},{"displayName":"Administration Concept 093","url":"contents/check1/large-fileset/topic-093"}],"_key":"GUID-f45e1c99-d042-4219-bfd6-6f87198dd1bb","publishSubfolder":"check1"}]
+const treeData = [{"displayName":"testMapRepublish","isMap":true,"children":[{"displayName":"Administration Concept 089","url":"contents/check2/large-fileset/topic-089"},{"displayName":"Administration Concept 093","url":"contents/check2/large-fileset/topic-093"}],"_key":"GUID-f45e1c99-d042-4219-bfd6-6f87198dd1bb","publishSubfolder":"check2"}]
 const mapTitle = "guides-github-repo-main"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
