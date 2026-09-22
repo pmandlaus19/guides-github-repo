@@ -1,5 +1,5 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"test1fgd","url":"contents/testthispls/test1fgd"},{"displayName":"map","isMap":true,"children":[{"displayName":"test1fgd","url":"contents/testthispls/test1fgd"}],"_key":"GUID-68fc91ad-1484-412b-ab9e-e92128c4a4f9","assets":["contents/large-fileset/mid-test-image-3.png"]}]
+const treeData = [{"displayName":"test1fgd","url":"contents/testthispls/test1fgd"},{"displayName":"map","isMap":true,"children":[{"displayName":"test1fgd","url":"contents/testthispls/test1fgd"}],"_key":"GUID-68fc91ad-1484-412b-ab9e-e92128c4a4f9","assets":["contents/large-fileset/mid-test-image-3.png"]},{"displayName":"testMapRepublish","isMap":true,"children":[{"displayName":"Administration Concept 089","url":"contents/large-fileset/topic-089"},{"displayName":"Administration Concept 093","url":"contents/large-fileset/topic-093"}],"_key":"GUID-f45e1c99-d042-4219-bfd6-6f87198dd1bb"}]
 const mapTitle = "guides-github-repo-main"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
