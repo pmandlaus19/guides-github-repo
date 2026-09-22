@@ -1,1 +1,1 @@
-export default [{"displayName":"test1fgd","url":"contents/testthispls/test1fgd"}]
+export default [{"displayName":"test1fgd","url":"contents/testthispls/test1fgd"},{"displayName":"map","isMap":true,"children":[{"displayName":"test1fgd","url":"contents/testthispls/test1fgd"}],"_key":"GUID-68fc91ad-1484-412b-ab9e-e92128c4a4f9","assets":["contents/large-fileset/mid-test-image-3.png"]}]
