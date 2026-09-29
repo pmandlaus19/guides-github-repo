@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#f4f7fb"/>
+  <rect x="100" y="90" width="600" height="270" rx="30" fill="#dce7f5" stroke="#244a73" stroke-width="8"/>
+  <g fill="#244a73">
+    <circle cx="220" cy="225" r="55"/>
+    <circle cx="400" cy="225" r="55"/>
+    <circle cx="580" cy="225" r="55"/>
+  </g>
+  <text x="400" y="60" text-anchor="middle" font-family="Arial" font-size="30" fill="#16324f">
+    Semiconductor Module 78
+  </text>
+  <text x="400" y="415" text-anchor="middle" font-family="Arial" font-size="22" fill="#16324f">
+    Process • Design • Validation
+  </text>
+</svg>
