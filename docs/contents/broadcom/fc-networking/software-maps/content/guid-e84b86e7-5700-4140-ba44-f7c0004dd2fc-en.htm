@@ -1,0 +1,41 @@
+<!--?xml version="1.0" encoding="utf-8" ?--><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="../../../../_rhdefault.css"></head><body id="task.dita_dd49dbd1-c94c-4dba-8ac9-bdc9fb8eb111" class="topic task" lang="en-US"><div class="breadcrumbs"><div></div></div><h1 class="title">Viewing a Summary Switch Status Report</h1><div id="GUID-271D8982-5D0F-497A-B85D-E22CA08F4981" class="shortdesc" data-attr-status="changed"><div><div><span>A summary view provides health status at a high level and includes enough information for you to investigate further, if necessary.</span></div></div></div><p id="GUID-233C5D4C-97DE-4B93-AC15-896FD81680D9" data-attr-status="changed">To view a summary switch status report, perform the following steps: </p><ol id="GUID-1714F8F3-1CEC-48D8-8663-D9AA4A7FC117" class="ol steps"><li id="GUID-D4EA51F3-8A45-40F5-B6B9-423C3A1EBEFA" class="li step"><span id="GUID-C15F7C7B-4E4C-4021-8812-2822CCB82689" class="ph cmd display-inline" data-attr-status="changed">Connect to the switch and log on using an account with admin permissions.</span></li><li id="GUID-8C7B8A54-4852-4D44-AA86-1B84380A0A3F" class="li step"><span id="GUID-1F735F12-B1E9-4EE8-B9F3-754642177707" class="ph cmd display-inline" data-attr-status="changed">Enter the <code id="v24530871" class="ph codeph display-inline" data-attr-status="changed">mapsdb --show</code> command with no other parameters to display the summary status. </span></li></ol><span class="prefix-content">Result</span><p id="p_1" data-attr-status="changed">The following example displays the general status of the switch (MARGINAL). It lists the overall status of the monitoring categories for the current day (measured since midnight) and for the last seven days. If any categories are shown as out of range, the last five rules&nbsp;that caused this status are listed. If a monitoring rule is triggered, the corresponding RASLog message appears under the <span class="keyword wintitle display-inline">Rules Affecting Health</span> section of the dashboard. Note that the example column headings are edited to allow it to display clearly.</p><code class="pre-white-space pre codeblock display-block" data-attr-xml:space="preserve">switch:admin&gt; mapsdb --show<br>
+<br>
+1 Dashboard Information:<br>
+=======================<br>
+<br>
+DB start time: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Thu Sep 2 08:32:24 2024<br>
+Active policy: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;max_rules<br>
+Configured Notifications: &nbsp; &nbsp; &nbsp; RASLOG,SW_CRITICAL,SW_MARGINAL,SFP_MARGINAL,FPIN,HA_RECOVER<br>
+Fenced Ports : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;None<br>
+Decommissioned Ports : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;None<br>
+Fenced circuits : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; N/A<br>
+Quarantined Ports : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; None<br>
+Top Zoned PIDs &lt;pid(it-flows)&gt;:<br>
+<br>
+2 Switch Health Report:<br>
+=======================<br>
+<br>
+Current Switch Policy Status: MARGINAL<br>
+<br>
+<br>
+3.1 Summary Report:<br>
+===================<br>
+<br>
+Category &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Today &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Last 7 days &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |<br>
+--------------------------------------------------------------------------------<br>
+Port Health &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|No Errors &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |No Errors &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |<br>
+BE Port Health &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |No Errors &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |No Errors &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |<br>
+Fru Health &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |In operating range &nbsp; &nbsp; &nbsp; &nbsp;|In operating range &nbsp; &nbsp; &nbsp; &nbsp;|<br>
+Security Violations &nbsp; &nbsp; &nbsp;|In operating range &nbsp; &nbsp; &nbsp; &nbsp;|No Errors &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |<br>
+Fabric State Changes &nbsp; &nbsp; |In operating range &nbsp; &nbsp; &nbsp; &nbsp;|No Errors &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |<br>
+Switch Resource &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|In operating range &nbsp; &nbsp; &nbsp; &nbsp;|In operating range &nbsp; &nbsp; &nbsp; &nbsp;|<br>
+Fabric Performance Impact|In operating range &nbsp; &nbsp; &nbsp; &nbsp;|In operating range &nbsp; &nbsp; &nbsp; &nbsp;|<br>
+IO Health &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|In operating range &nbsp; &nbsp; &nbsp; &nbsp;|In operating range &nbsp; &nbsp; &nbsp; &nbsp;|<br>
+IO Latency &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |In operating range &nbsp; &nbsp; &nbsp; &nbsp;|In operating range &nbsp; &nbsp; &nbsp; &nbsp;|<br>
+<br>
+<br>
+3.2 Rules Affecting Health:<br>
+===========================<br>
+<br>
+Category(Violation Count)|RepeatCount|Rule Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|Execution Time &nbsp; |Object &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Triggered Value(Units)|<br>
+-----------------------------------------------------------------------------------------------------------------------------<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></code></body></html>

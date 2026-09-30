@@ -1,0 +1,40 @@
+<!--?xml version="1.0" encoding="utf-8" ?--><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="../../../../_rhdefault.css"></head><body id="concept.dita_7c6d55bd-a194-49a8-9b16-bc977611c1fc" class="topic concept" lang="en-US"><div class="breadcrumbs"><div></div></div><h1 class="title">Monitoring System</h1><p>A monitoring system is a value (measure or statistic) that is monitored by MAPS. MAPS monitors the changes in the monitoring system.&nbsp;These monitoring systems have configurable threshold values that MAPS can monitor and send alerts using RASLog notifications, SNMP messages, Email, and so on.</p><p>A monitoring system is part of a MAPS condition that also includes a timebase and a threshold. If the condition is evaluated as true, the actions that are specified in the rule are triggered.</p><p>The following example shows the CRC errors that are monitored by the CRC monitoring system for&nbsp;back-end&nbsp;ports.<code class="pre-white-space pre codeblock display-block" data-attr-xml:space="preserve">switch:admin&gt; mapsdb --show all<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;------------------------Output truncated----------------------------<br>
+<br>
+3.1 Summary Report:<br>
+===================<br>
+<br>
+Category &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Today &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Last 7 days &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |<br>
+--------------------------------------------------------------------------------<br>
+BE Port Health &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Out of operating range &nbsp; &nbsp;|In operating range &nbsp; &nbsp; &nbsp; &nbsp;|<br>
+<br>
+<br>
+<br>
+3.2 Rules Affecting Health:<br>
+===========================<br>
+<br>
+Category(Violation Count)|RepeatCount|Rule Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|Execution Time &nbsp; |Object &nbsp; &nbsp; &nbsp; |Triggered Value(Units)|<br>
+-----------------------------------------------------------------------------------------------------------------------<br>
+BE Port Health(1) &nbsp; &nbsp; &nbsp; &nbsp;|1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|defALL_BE_PORTSCRC_5M_10 |07/12/25 02:36:02|BE Port 11/88|26 CRC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|<br>
+<br>
+&nbsp;<br>
+<br>
+4 History Data:<br>
+===============<br>
+<br>
+Stats(Units) &nbsp; &nbsp; &nbsp; &nbsp;Current &nbsp; &nbsp; 07/12/25 &nbsp; &nbsp;--/--/-- &nbsp; &nbsp;--/--/-- &nbsp; &nbsp;--/--/-- &nbsp; &nbsp;--/--/-- &nbsp; &nbsp;--/--/--<br>
+----------------------------------------------------------------------------------------------------<br>
+CRC(CRCs) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -<br>
+ITW(ITWs) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -<br>
+<br>
+<br>
+5 History Data for Backend ports:<br>
+=================================<br>
+Stats(Units) &nbsp; &nbsp; &nbsp; &nbsp;Current &nbsp; &nbsp; 07/12/25 &nbsp; &nbsp;--/--/-- &nbsp; &nbsp;--/--/-- &nbsp; &nbsp;--/--/-- &nbsp; &nbsp;--/--/-- &nbsp; &nbsp;--/--/--<br>
+----------------------------------------------------------------------------------------------------<br>
+<br>
+CRC(CRCs) &nbsp; &nbsp;11/88(26) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -<br>
+ITW(ITWs) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -<br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;------------------------Output truncated----------------------------<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></code></p></body></html>

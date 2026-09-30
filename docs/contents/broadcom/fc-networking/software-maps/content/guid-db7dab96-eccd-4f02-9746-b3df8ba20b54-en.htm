@@ -1,0 +1,22 @@
+<!--?xml version="1.0" encoding="utf-8" ?--><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="../../../../_rhdefault.css"></head><body id="v26781117" data-tcx-attr-rev="rev@1" lang="en-US" class="topic concept" data-attr-rev="1"><div class="breadcrumbs"><div></div></div><h1 id="GUID-D0F74DE3-E3A3-449A-8AFB-B7398A37E22F" class="title">Email Alerts</h1><div id="GUID-D7F29349-C2C5-4F14-AFDB-7B903FDA1BBD" class="shortdesc" data-attr-status="changed"><div><div><span>An email alert action sends information about the event to one or more specified email addresses. The email alert specifies the threshold and describes the event, much like an error message.</span></div></div></div><p id="GUID-DDA40536-F8AF-4CEA-ACEC-81BCFFBC27C1" data-attr-status="changed">To configure the email recipients, use the <code id="v24528805" class="ph codeph display-inline" data-attr-status="changed">mapsConfig --emailcfg</code> interactive command. Multiple destination email addresses are possible. The addresses must be separated using a comma between each address, and each address must be a complete email address. For example, abc@company.com is a valid email address; abc@company is not.</p><p id="GUID-5D848889-8760-4485-AF0B-BAC33635DCB7" data-attr-status="changed">To clear all configured email addresses, enter the following&nbsp;command. All configured email addresses are erased.</p><code class="pre-white-space pre codeblock display-block" data-attr-xml:space="preserve">switch:admin&gt; mapsConfig --emailcfg<br>
+Enter the email address(es) : none<br>
+Enter the from address : none<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></code><p>Enter the <code class="ph codeph display-inline">mapsConfig&nbsp;--emailcfg</code> command to configure the email address for email alerts on the switch interactively. It is assumed that you have already correctly configured and validated the email server.<code class="pre-white-space pre codeblock display-block" data-attr-xml:space="preserve">switch:admin&gt; mapsConfig --emailcfg<br>
+Enter the email address(es) : abcd@broacom.com<br>
+Enter the from address : efgh@broadcom.com<br>
+<br>
+2025/07/02-09:21:45 (GMT), [MAPS-1015], 1703, FID 128, INFO, new_switch_name, MAPS recipient email address list got updated.<br>
+<br>
+2025/07/02-09:21:45 (GMT), [MAPS-1016], 1704, FID 128, INFO, new_switch_name, MAPS originator email address got updated.<br>
+<br>
+switch:admin&gt; mapsconfig --show<br>
+Configured Notifications: &nbsp; &nbsp; &nbsp; EMAIL,SW_CRITICAL,SW_MARGINAL,SFP_MARGINAL,HA_RECOVER<br>
+Mail Recipient: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; abcd@broacom.com<br>
+Mail From Address: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;efgh@broadcom.com<br>
+Raslog Mode: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Default<br>
+Decom Action Config: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;With Disable<br>
+Global Quiet Time: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Not Configured<br>
+Notification Behavior: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Adaptive<br>
+Paused members :<br>
+================<br>
+PORT :<br>
+SWITCH :<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></code></p></body></html>

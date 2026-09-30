@@ -1,0 +1,91 @@
+<!--?xml version="1.0" encoding="utf-8" ?--><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="../../../../_rhdefault.css"></head><body id="v26064702" data-tcx-attr-rev="rev@2" lang="en-US" class="topic reference" data-attr-rev="2"><div class="breadcrumbs"><div></div></div><h1 id="GUID-813FB586-D14E-47A8-8F2F-1D3E6361E113" class="title">Confirming the Slow-Drain Status of a Device</h1><div id="GUID-081EEF20-1B27-4160-BFDA-DAE702750C3C" class="shortdesc" data-attr-status="changed"><div><div><span>You can use the </span><code id="v24530290" class="ph codeph display-inline" data-attr-status="changed">nsshow</code><span>, </span><code id="v24530291" class="ph codeph display-inline" data-attr-status="changed">nscamshow</code><span>, and </span><code id="v24530292" class="ph codeph display-inline" data-attr-status="changed">nodefind</code><span> commands to verify that a device is slow-draining. </span></div></div></div><p id="p_1" data-attr-status="changed">The following example shows the output of the <code id="codeph_1" class="ph codeph display-inline" data-attr-status="changed">nsshow</code> command where there is a slow-draining device. The identifying line is called out in this example. If there is no slow-draining device, the line does not appear.</p><code class="pre-white-space pre codeblock display-block" id="codeblock_1" data-attr-status="changed" data-attr-xml:space="preserve">switch:admin&gt; nsshow<br>
+{<br>
+Type Pid &nbsp; &nbsp;COS &nbsp; &nbsp; PortName &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NodeName &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TTL(sec)<br>
+N &nbsp; &nbsp;010000; &nbsp; &nbsp;2,3;20:00:00:05:1e:92:e8:00;20:00:00:05:1e:92:e8:00; na<br>
+&nbsp; &nbsp; Fabric Port Name: 20:aa:bb:05:xy:ef:e8:00&nbsp;<br>
+&nbsp; &nbsp; Permanent Port Name: 20:00:00:ab:cd:ef:e8:00<br>
+&nbsp; &nbsp; Port Index: 0<br>
+&nbsp; &nbsp; Share Area: No<br>
+&nbsp; &nbsp; Device Shared in Other AD: No<br>
+&nbsp; &nbsp; Redirect: No&nbsp;<br>
+&nbsp; &nbsp; Partial: No<br>
+&nbsp; &nbsp; LSAN: No<br>
+&nbsp; &nbsp; Device link speed: 8GConnected through AG: YesReal device behind AG: YesPort Properties: SIM Port<br>
+N &nbsp; &nbsp;014a00; &nbsp; &nbsp;2,3;30:0a:00:05:1e:84:b5:c3;10:00:00:05:1e:84:b5:c3; na<br>
+&nbsp; &nbsp; FC4s: FCP&nbsp;<br>
+&nbsp; &nbsp; NodeSymb: [42] "dsim:ns_host:sw_5300edsim[172.26.26.188]"<br>
+&nbsp; &nbsp; Fabric Port Name: 20:aa:bb:05:xy:ef:e8:00&nbsp;<br>
+&nbsp; &nbsp; Permanent Port Name: 30:0a:00:05:1e:84:b5:c3<br>
+&nbsp; &nbsp; Port Index: 74<br>
+&nbsp; &nbsp; Share Area: No<br>
+&nbsp; &nbsp; Device Shared in Other AD: No<br>
+&nbsp; &nbsp; Redirect: No&nbsp;<br>
+&nbsp; &nbsp; Partial: No<br>
+&nbsp; &nbsp; LSAN: No<br>
+&nbsp; &nbsp; Device link speed: 8GConnected through AG: YesReal device behind AG: Yes<br>
+N &nbsp; &nbsp;015000; &nbsp; &nbsp; &nbsp;3;10:00:00:00:00:01:00:01;10:00:00:00:00:00:01:01; na<br>
+&nbsp; &nbsp; Fabric Port Name: 20:aa:bb:05:xy:ef:e8:00&nbsp;<br>
+&nbsp; &nbsp; Permanent Port Name: 10:00:00:00:00:01:00:01<br>
+&nbsp; &nbsp; Port Index: 80<br>
+&nbsp; &nbsp; Share Area: No<br>
+&nbsp; &nbsp; Device Shared in Other AD: No<br>
+&nbsp; &nbsp; Redirect: No&nbsp;<br>
+&nbsp; &nbsp; Partial: No<br>
+&nbsp; &nbsp; LSAN: No<br>
+&nbsp; &nbsp; Device link speed: 8GConnected through AG: YesReal device behind AG: Yes&nbsp;<br>
+&nbsp; &nbsp; Slow Drain Device: Yes &nbsp; &nbsp; &nbsp;<b id="b_1" class="ph b display-inline">&lt;== Slow-draining device identified</b><br>
+N &nbsp; &nbsp;015100; &nbsp; &nbsp; &nbsp;3;10:00:00:00:00:02:00:01;10:00:00:00:00:00:02:01; na<br>
+&nbsp; &nbsp; Fabric Port Name: 20:aa:bb:05:xy:ef:e8:00&nbsp;<br>
+&nbsp; &nbsp; Permanent Port Name: 10:00:00:00:00:02:00:01<br>
+&nbsp; &nbsp; Port Index: 81<br>
+&nbsp; &nbsp; Share Area: No<br>
+&nbsp; &nbsp; Device Shared in Other AD: No<br>
+&nbsp; &nbsp; Redirect: No&nbsp;<br>
+&nbsp; &nbsp; Partial: No<br>
+&nbsp; &nbsp; LSAN: No<br>
+&nbsp; &nbsp; Device link speed: 8GConnected through AG: YesReal device behind AG: YesThe Local Name Server has 4 entries }<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></code><p id="p_2" data-attr-status="changed">The following example shows the output of the <code id="codeph_2" class="ph codeph display-inline" data-attr-status="changed">nscamshow</code> command where there is a slow-draining device. The identifying line is called out in this example. If there was no slow-draining device, the line does not appear.</p><code class="pre-white-space pre codeblock display-block" id="codeblock_2" data-attr-status="changed" data-attr-xml:space="preserve">switch:admin&gt; nscamshow&nbsp;<br>
+nscam show for remote switches:<br>
+Switch entry for 2<br>
+&nbsp; state &nbsp;rev &nbsp; &nbsp;owner &nbsp;cap_available<br>
+&nbsp; known &nbsp; v740 &nbsp;0xfffc01 1<br>
+&nbsp; Device list: count 7<br>
+&nbsp; &nbsp; Type Pid &nbsp; &nbsp;COS &nbsp; &nbsp; PortName &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NodeName<br>
+&nbsp; &nbsp; N &nbsp; &nbsp;020a00; &nbsp; &nbsp; &nbsp;3;10:00:00:00:00:04:00:01;10:00:00:00:00:00:04:01;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Fabric Port Name: 20:aa:bb:05:xy:ef:e8:00&nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Permanent Port Name: 10:00:00:00:00:04:00:01<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Port Index: 10<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Share Area: No<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Device Shared in Other AD: No<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Redirect: No&nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Partial: No<br>
+&nbsp; &nbsp; N &nbsp; &nbsp;020b00; &nbsp; &nbsp; &nbsp;3;10:00:00:00:00:0a:00:01;10:00:00:00:00:00:0a:01;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Fabric Port Name: 20:aa:bb:05:xy:ef:e8:00&nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Permanent Port Name: 10:00:00:00:00:0a:00:01<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Port Index: 11<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Share Area: No<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Device Shared in Other AD: No<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Redirect: No&nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Partial: No<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Slow Drain Device: Yes &nbsp; &nbsp; &nbsp;<b id="b_2" class="ph b display-inline">&lt;== Slow-draining device identified</b><br>
+&nbsp; &nbsp; N &nbsp; &nbsp;021000; &nbsp; &nbsp; &nbsp;3;10:00:00:00:00:05:00:01;10:00:00:00:00:00:05:01;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Fabric Port Name: 20:aa:bb:05:xy:ef:e8:00&nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Permanent Port Name: 10:00:00:00:00:05:00:01<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Port Index: 16<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Share Area: No<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Device Shared in Other AD: No<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Redirect: No&nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Partial: No<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></code><p id="p_3" data-attr-status="changed">The following example shows the output of the <code id="codeph_3" class="ph codeph display-inline" data-attr-status="changed">nodefind</code> command where there is a slow-draining device. The identifying line is called out in this example. If there was no slow-draining device, the line does not appear.</p><code class="pre-white-space pre codeblock display-block" id="codeblock_3" data-attr-status="changed" data-attr-xml:space="preserve">switch:admin&gt; nodefind 015000<br>
+Local:<br>
+&nbsp;Type Pid COS PortName NodeName SCR<br>
+&nbsp;N 015000; 3;10:00:00:00:00:01:00:01;10:00:00:00:00:00:01:01; 0x00000003<br>
+&nbsp; &nbsp; Fabric Port Name: 20:aa:bb:05:xy:ef:e8:00&nbsp;<br>
+&nbsp; &nbsp; Permanent Port Name: 10:00:00:00:00:01:00:01<br>
+&nbsp; &nbsp; Device type: Physical Unknown(initiator/target)<br>
+&nbsp; &nbsp; Port Index: 80<br>
+&nbsp; &nbsp; Share Area: No<br>
+&nbsp; &nbsp; Device Shared in Other AD: No<br>
+&nbsp; &nbsp; Redirect: No&nbsp;<br>
+&nbsp; &nbsp; Partial: No<br>
+&nbsp; &nbsp; LSAN: No<br>
+&nbsp; &nbsp; Slow Drain Device: Yes &nbsp; &nbsp; &nbsp;<b id="b_3" class="ph b display-inline">&lt;== Slow-draining device identified</b><br>
+&nbsp; &nbsp; Aliases:<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></code></body></html>

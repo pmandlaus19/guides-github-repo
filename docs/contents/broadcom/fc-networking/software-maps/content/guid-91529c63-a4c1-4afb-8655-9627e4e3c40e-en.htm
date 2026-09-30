@@ -1,0 +1,44 @@
+<!--?xml version="1.0" encoding="utf-8" ?--><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="../../../../_rhdefault.css"></head><body id="concept.dita_301246a6-9205-4ba1-991b-042d8ccb40b2" class="topic concept" lang="en-US"><div class="breadcrumbs"><div></div></div><h1 class="title">MAPS Group Types</h1><div class="shortdesc"><div><div><span>MAPS supports different group types that are used in the dashboard category for monitoring. A set of similar objects&nbsp;that&nbsp;combine&nbsp;to form a single entity is referred to as a </span><i class="ph i display-inline">group</i><span> or </span><i class="ph i display-inline">logical group</i><span>. For example, you can combine all the small form-factor pluggable (SFP) transceivers for the&nbsp;ALL_PORTS group. Then&nbsp;you&nbsp;create specific rules for monitoring this group&nbsp;which facilitates the effective monitoring of the SFP ports. </span></div></div></div><p>The MAPS object view describes the types of MAPS groups and elements that can be monitored using MAPS.&nbsp;For example, you can use the <code class="ph codeph display-inline">switchshow</code> command to view the switch ports, connections, and status of all ports without MAPS. The following example shows the switch ports and connections using the <code class="ph codeph display-inline">switchshow</code> command.<code class="pre-white-space pre codeblock display-block" data-attr-xml:space="preserve">switch:admin&gt; switchshow<br>
+switchName: &nbsp; &nbsp; fid_128<br>
+switchType: &nbsp; &nbsp; 180.0<br>
+------Output truncated---------<br>
+Allow XISL Use: OFF<br>
+LS Attributes: &nbsp;[FID: 128, Base Switch: No, Default Switch: Yes, Ficon Switch: No, Address Mode 0]<br>
+Index Slot Port Address Media &nbsp;Speed &nbsp; &nbsp; &nbsp; &nbsp;State &nbsp; &nbsp;Proto<br>
+============================================================<br>
+96 &nbsp; &nbsp;4 &nbsp; &nbsp;0 &nbsp; 016000 &nbsp; -- &nbsp; &nbsp;N32 &nbsp; &nbsp; &nbsp; No_Module &nbsp; FC<br>
+97 &nbsp; &nbsp;4 &nbsp; &nbsp;1 &nbsp; 016100 &nbsp; -- &nbsp; &nbsp;N32 &nbsp; &nbsp; &nbsp; No_Module &nbsp; FC<br>
+98 &nbsp; &nbsp;4 &nbsp; &nbsp;2 &nbsp; 016200 &nbsp; -- &nbsp; &nbsp;N32 &nbsp; &nbsp; &nbsp; No_Module &nbsp; FC<br>
+99 &nbsp; &nbsp;4 &nbsp; &nbsp;3 &nbsp; 016300 &nbsp; -- &nbsp; &nbsp;N32 &nbsp; &nbsp; &nbsp; No_Module &nbsp; FC<br>
+<br>
+&lt;The output is truncated to minimize the content&gt; &nbsp; &nbsp;<br>
+<br>
+1805 &nbsp; -1 &nbsp;1805 &nbsp; ------ &nbsp; -- &nbsp; &nbsp;-- &nbsp; &nbsp; &nbsp; Offline &nbsp; &nbsp;FCoE<br>
+1806 &nbsp; -1 &nbsp;1806 &nbsp; ------ &nbsp; -- &nbsp; &nbsp;-- &nbsp; &nbsp; &nbsp; Offline &nbsp; &nbsp;FCoE<br>
+1807 &nbsp; -1 &nbsp;1807 &nbsp; ------ &nbsp; -- &nbsp; &nbsp;-- &nbsp; &nbsp; &nbsp; Offline &nbsp; &nbsp;FCoE<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></code></p><p>The following example shows the&nbsp;switch ports and connections&nbsp;in IPS LS.<code class="pre-white-space pre codeblock display-block" data-attr-xml:space="preserve">switch:admin&gt; switchshow<br>
+switchName: &nbsp; &nbsp; SW1<br>
+switchType: &nbsp; &nbsp; 179.0<br>
+switchState: &nbsp; &nbsp;Online<br>
+switchMode: &nbsp; &nbsp; Native<br>
+switchRole: &nbsp; &nbsp; Principal<br>
+switchDomain: &nbsp; 1<br>
+switchId: &nbsp; &nbsp; &nbsp; fffc01<br>
+switchWwn: &nbsp; &nbsp; &nbsp;10:01:02:03:04:aa:bb:cd<br>
+zoning: &nbsp; &nbsp; &nbsp; &nbsp; OFF<br>
+switchBeacon: &nbsp; OFF<br>
+FC Router: &nbsp; &nbsp; &nbsp;OFF<br>
+Fabric Name: &nbsp; &nbsp;FOS_IPS<br>
+HIF Mode: &nbsp; &nbsp; &nbsp; OFF<br>
+LS Attributes: &nbsp;[FID: 30, Base Switch: No, Default Switch: No, Ficon Switch: No,<b class="ph b display-inline">IP Storage Switch: Yes</b>, Address Mode 0]<br>
+Index Slot Port Address Media &nbsp;Speed &nbsp; &nbsp; &nbsp; &nbsp;State &nbsp; &nbsp;Proto<br>
+============================================================<br>
+17 &nbsp; &nbsp;3 &nbsp; 17 &nbsp; 011100 &nbsp; id &nbsp; &nbsp;25G &nbsp; &nbsp; &nbsp; Online &nbsp; &nbsp; &nbsp;ETH<br>
+18 &nbsp; &nbsp;3 &nbsp; 18 &nbsp; 011200 &nbsp; id &nbsp; &nbsp;25G &nbsp; &nbsp; &nbsp; Online &nbsp; &nbsp; &nbsp;ETH<br>
+40 &nbsp; &nbsp;3 &nbsp; 40 &nbsp; 012800 &nbsp; -- &nbsp; &nbsp;16G &nbsp; &nbsp; &nbsp; No_Module &nbsp; FC<br>
+237 &nbsp; 7 &nbsp; 45 &nbsp; 01ed00 &nbsp; id &nbsp; &nbsp;N64 &nbsp; &nbsp; &nbsp; Online &nbsp; &nbsp; &nbsp;FC &nbsp;E-Port &nbsp;10:01:02:03:04:aa:bb:cd "IPS_TEST_CAS" (downstream)(Trunk master)<br>
+245 &nbsp; 7 &nbsp; 53 &nbsp; 01f500 &nbsp; -- &nbsp; &nbsp;16G &nbsp; &nbsp; &nbsp; No_Module &nbsp; FC<br>
+305 &nbsp; 8 &nbsp; 17 &nbsp; 013140 &nbsp; id &nbsp; &nbsp;25G &nbsp; &nbsp; &nbsp; Online &nbsp; &nbsp; &nbsp;ETH &nbsp;LAG Primary member (1/LAG102)<br>
+306 &nbsp; 8 &nbsp; 18 &nbsp; 013240 &nbsp; id &nbsp; &nbsp;25G &nbsp; &nbsp; &nbsp; Online &nbsp; &nbsp; &nbsp;ETH &nbsp;LAG member (1/LAG102) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+307 &nbsp; 8 &nbsp; 19 &nbsp; 013340 &nbsp; id &nbsp; &nbsp;25G &nbsp; &nbsp; &nbsp; Online &nbsp; &nbsp; &nbsp;ETH &nbsp;LAG member (1/LAG102) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+328 &nbsp; 8 &nbsp; 40 &nbsp; 014840 &nbsp; id &nbsp; &nbsp;25G &nbsp; &nbsp; &nbsp; Online &nbsp; &nbsp; &nbsp;ETH<br>
+329 &nbsp; 8 &nbsp; 41 &nbsp; 014940 &nbsp; id &nbsp; &nbsp;25G &nbsp; &nbsp; &nbsp; Online &nbsp; &nbsp; &nbsp;ETH<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></code></p><p>The following sections provide more information about the types of MAPS group types that are available for monitoring.</p></body></html>

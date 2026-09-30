@@ -1,0 +1,48 @@
+<!--?xml version="1.0" encoding="utf-8" ?--><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="../../../../_rhdefault.css"></head><body id="concept.dita_2cf4c3d8-9fa5-42bc-ad72-f72f6d2ee8a2" class="topic concept" lang="en-US"><div class="breadcrumbs"><div></div></div><h1 class="title">Dashboard</h1><p>The MAPS dashboard provides a summary view of the switch health status that allows you to determine whether everything is working according to policy or whether you must investigate further. The dashboard provides an integrated dashboard view that helps administrators easily identify trends and quickly isolate issues occurring on a switch or fabric.</p><p>The dashboard view contains the following reports:</p><ul id="ul_1" class="ul"><li class="li"><b class="ph b display-inline">Dashboard Information</b> –&nbsp;Displays the following basic dashboard data:<ul id="ul_2" class="ul"><li class="li">the time the dashboard was started</li><li class="li">the name of the active policy</li><li class="li">any fenced, decommissioned, or quarantined ports</li><li class="li">the list of FCIP circuits that are fenced</li><li class="li">top PIDs</li></ul></li><li class="li"><b class="ph b display-inline">Switch Health Report</b> –&nbsp;Displays the current switch policy status and lists any factors contributing to that status as defined by the Switch Health Report rules in the active policy.</li><li class="li"><b class="ph b display-inline">Summary Report</b> –&nbsp;Contains two subsections:<ol id="ol_1" class="ol"><li class="li"><b class="ph b display-inline">Category Report</b> –&nbsp;Collects and summarizes the various switch statistics that are monitored by MAPS into multiple categories, displays the current status of each category since midnight and the status of each category for the past seven days.</li><li class="li"><b class="ph b display-inline">Rules Affecting Health</b> –&nbsp;Displays if a rule violation has caused a change in the status of a category and rule-related information.</li></ol></li></ul><p>The following example displays the MAPS dashboard view.</p><code class="pre-white-space pre codeblock display-block" data-attr-xml:space="preserve">switch:admin&gt; mapsdb --show<br>
+<br>
+1 Dashboard Information:<br>
+=======================<br>
+<br>
+DB start time: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Thu Jul 10 20:35:34 2025<br>
+Active policy: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dflt_aggressive_policy<br>
+Configured Notifications: &nbsp; &nbsp; &nbsp; RASLOG,SW_CRITICAL,SW_MARGINAL,SFP_MARGINAL,HA_RECOVER<br>
+Fenced Ports : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;None<br>
+Decommissioned Ports : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;None<br>
+Fenced circuits : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; N/A<br>
+Quarantined Ports : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0<br>
+Top Zoned PIDs &lt;pid(it-flows)&gt;: 0x011f00(4) 0x011602(1) 0x011601(1) 0x011603(1) 0x011b00(1)<br>
+<br>
+2 Switch Health Report:<br>
+=======================<br>
+<br>
+Current Switch Policy Status: MARGINAL<br>
+Contributing Factors:<br>
+---------------------<br>
+*SYSTEM_INTEGRITY_CHECK (MARGINAL).<br>
+<br>
+<br>
+3.1 Summary Report:<br>
+===================<br>
+<br>
+Category &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Today &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Last 7 days &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |<br>
+--------------------------------------------------------------------------------<br>
+Port Health &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|Out of operating range &nbsp; &nbsp;|Out of operating range &nbsp; &nbsp;|<br>
+Fru Health &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |In operating range &nbsp; &nbsp; &nbsp; &nbsp;|In operating range &nbsp; &nbsp; &nbsp; &nbsp;|<br>
+Security Violations &nbsp; &nbsp; &nbsp;|In operating range &nbsp; &nbsp; &nbsp; &nbsp;|Out of operating range &nbsp; &nbsp;|<br>
+Fabric State Changes &nbsp; &nbsp; |Out of operating range &nbsp; &nbsp;|Out of operating range &nbsp; &nbsp;|<br>
+Switch Resource &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|In operating range &nbsp; &nbsp; &nbsp; &nbsp;|Out of operating range &nbsp; &nbsp;|<br>
+Fabric Performance Impact|Out of operating range &nbsp; &nbsp;|Out of operating range &nbsp; &nbsp;|<br>
+IO Health &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|In operating range &nbsp; &nbsp; &nbsp; &nbsp;|In operating range &nbsp; &nbsp; &nbsp; &nbsp;|<br>
+IO Latency &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |In operating range &nbsp; &nbsp; &nbsp; &nbsp;|In operating range &nbsp; &nbsp; &nbsp; &nbsp;|<br>
+<br>
+<br>
+3.2 Rules Affecting Health:<br>
+===========================<br>
+<br>
+Category(Violation Count)|RepeatCount|Rule Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|Execution Time &nbsp; |Object &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Triggered Value(Units)|<br>
+-----------------------------------------------------------------------------------------------------------------------------<br>
+Port Health(10428) &nbsp; &nbsp; &nbsp; |19 &nbsp; &nbsp; &nbsp; &nbsp; |defALL_OTHER_F_PORTSSTATE_C|07/12/25 10:48:39|U-Port 0 &nbsp; &nbsp; &nbsp; &nbsp; |3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |HG_2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|18 &nbsp; &nbsp; &nbsp; &nbsp; |defNON_E_F_PORTSSTATE_CHG_2|07/12/25 10:48:39|U-Port 0 &nbsp; &nbsp; &nbsp; &nbsp; |3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;----------Output truncated-----------<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></code></body></html>
