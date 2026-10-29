@@ -1,6 +1,6 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"testgitlab","url":"contents/testgitlab"}]
-const mapTitle = "testgitlab.ditamap"
+const treeData = [{"displayName":"testgitlab","url":"contents/testgitlab"},{"displayName":"testMapRepublish","isMap":true,"children":[{"displayName":"thereInMap","url":"","children":[{"displayName":"Administration Concept 089","url":"contents/topichead/large-fileset/topic-089"},{"displayName":"topicNav","url":"contents/topichead/test3/level1"}]}],"_key":"GUID-f45e1c99-d042-4219-bfd6-6f87198dd1bb","publishSubfolder":"topichead"}]
+const mapTitle = "guides-github-repo-main_1"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
 function expandHeirarchy(element, root) {
