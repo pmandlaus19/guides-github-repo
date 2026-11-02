@@ -1,1 +1,0 @@
-export default [{"displayName":"MiniTOC test","isMap":true,"children":[{"displayName":"MiniTOC navigation test","url":"contents/check/minitoc-long-topic"}],"_key":"GUID-020f7a17-9935-492d-82d5-59597bd880e2","publishSubfolder":"check"}]
