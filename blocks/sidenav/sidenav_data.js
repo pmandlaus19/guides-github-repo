@@ -1,0 +1,1 @@
+export default [{"publishSubfolder":"newdoc","children":[{"displayName":"topic1","url":"contents/newdoc/subfolder1/topic1"},{"displayName":"topic2","url":"contents/newdoc/subfolder2/topic2"}],"displayName":"test_move","_key":"GUID-829f9a9a-0680-4eec-8e88-c94dc173258c","isMap":true}]
